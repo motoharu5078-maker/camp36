@@ -1,0 +1,26 @@
+/* フォントはすべてリポジトリに同梱（SIL Open Font License）。Service Worker がキャッシュするのでオフラインでも同じ見た目になる。 */
+@font-face {
+  font-family: 'Anton';
+  src: url('../fonts/anton.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  src: url('../fonts/zenkaku-700.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  src: url('../fonts/zenkaku-900.woff2') format('woff2');
+  font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../fonts/plexmono-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../fonts/plexmono-600.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}

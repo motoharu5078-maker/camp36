@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CAMP 36 — 12.23 計量日</title>
+<meta name="description" content="12月23日に最高の状態で立つための36日間トレーニングキャンプ。">
+<meta name="theme-color" content="#0F0F0E">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CAMP 36">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preload" href="fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main id="view"></main>
+
+<nav id="tabs" aria-label="メイン">
+  <a href="#/today" data-tab="today">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><path d="M8 12.5l3 3 5-6.5"/></svg>
+    <span>TODAY</span>
+  </a>
+  <a href="#/face" data-tab="face">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C8 3 5.5 6 5.5 10.5 5.5 15.5 8.5 21 12 21s6.5-5.5 6.5-10.5C18.500 6 16 3 12 3z"/><path d="M9 11h1.500M13.500 11H15M10.500 16h3"/></svg>
+    <span>FACE</span>
+  </a>
+  <a href="#/gym" data-tab="gym">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.500v5M6.500 6v12M17.500 6v12M21 9.500v5M6.500 12h11"/></svg>
+    <span>GYM</span>
+  </a>
+  <a href="#/roadmap" data-tab="roadmap">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18"/><path d="M5 5h4v4H5zM5 14h4v4H5z"/><path d="M12.500 7H20M12.500 16H18"/></svg>
+    <span>ROADMAP</span>
+  </a>
+  <a href="#/book" data-tab="book">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v13M4 5h5.500A2.500 2.500 0 0112 7.500 2.500 2.500 0 0114.500 5H20v13h-5.500A2.500 2.500 0 0012 20a2.500 2.500 0 00-2.500-2H4z"/></svg>
+    <span>BOOK</span>
+  </a>
+</nav>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="sheet-root"></div>
+
+<noscript><p style="padding:24px;color:#ECE8DF">このアプリは JavaScript が必要です。</p></noscript>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
