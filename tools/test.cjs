@@ -423,8 +423,9 @@ async function func(browser) {
   await page.fill('[data-memo]', '後半の首がきつい');
   await open('2026-11-29', 'video', '.yt');
   check('動画: メモが残る・既定は 07:00', (await page.inputValue('[data-memo]')) === '後半の首がきつい' && (await page.textContent('[data-time]')) === '07:00');
-  const yt = await page.frameLocator('.yt iframe').locator('body').count().catch(() => 0);
-  check('動画: iframe が読み込まれる', yt === 1);
+  // 回線越しだと読み込みに時間がかかるので、プレーヤーの中身が出るまで待つ
+  const yt = await page.frameLocator('.yt iframe').locator('body').waitFor({ state: 'attached', timeout: 15000 }).then(() => true).catch(() => false);
+  check('動画: iframe が読み込まれる', yt);
 
   // --- ジム ---
   await open('2026-11-29', 'gym', '.ex');           // DAY 12（日）
